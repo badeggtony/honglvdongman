@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+}
+html body header {
+  width: 100%;
+  height: 44px;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+html body header .top_bar h1 {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  font-family: 'microsoft yahei';
+  margin: 0;
+}
+html body header .top_bar a {
+  color: orangered;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  line-height: 44px;
+}
+html body header .top_bar a:hover {
+  color: orangered;
+  text-decoration: none;
+}
+html body main {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+html body main .lists {
+  width: 100%;
+}
+html body main .lists li {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+}
+html body main .lists li a {
+  display: block;
+  width: 100%;
+}
+html body main .lists li a img {
+  display: block;
+  width: 100%;
+}
+html body main .lists li p {
+  width: 100%;
+  margin-bottom: 0;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+}

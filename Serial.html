@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- 网站的语言 是中文 -->
+<html lang="zh-CN">
+
+<head>
+    <!-- 编码格式是 utf-8 -->
+    <meta charset="utf-8">
+    <!-- 使用 最新式 ie 内核渲染
+国内某些 所谓的 双核浏览器 或者是 直接 使用webkit去渲染
+-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口属性
+没有设置 禁用 用户缩放, 如果有需求可以添加
+ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>连载动漫</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/serial.css">
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+    <!--
+media queries 媒体查询
+-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- hack写法 当lt less than 小于 ie9的时候  -->
+
+    <!--[if lt IE 9]>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) bootstrap是基于jq的-->
+    <script src="lib/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed 导入boot的一些js -->
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="lib/js/html5shiv.js"></script>
+    <script src="lib/js/respond.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <div class="top_bar">
+        <a href="index.html" >&lt;</a>
+        <h1>连载动漫</h1>
+    </div>
+</header>
+<main>
+    <script src='js/template-native.js'></script>
+    <script type='text/template' id='lists'>
+        <ul class="lists clearfix">
+            <% for( var i = 0; i<array.length;i++){ %>
+            <li>
+                <a href="#"><img src="<%=array[i].img%>" alt=""></a>
+                <div class="content">
+                    <h3><%=array[i].name%></h3>
+                    <p><%=array[i].episode%></p>
+                    <p><%=array[i].updateTime%></p>
+                    <p>下载次数：<%=array[i].downloadCount%></p>
+                </div>
+            </li>
+            <% } %>
+        </ul>
+    </script>
+    <script>
+        $(function () {
+
+            $.getJSON('http://127.0.0.1:9090/api/getlianzai', function (data) {
+//            console.log(data);
+                var lists = template('lists',{array:data});
+                $('main').prepend(lists);
+            })
+        })
+    </script>
+</main>
+</body>
+</html>

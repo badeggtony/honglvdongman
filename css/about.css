@@ -1,0 +1,97 @@
+html {
+  height: 100%;
+}
+html body {
+  width: 100%;
+  height: 100%;
+}
+html body header {
+  width: 100%;
+  height: 44px;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+html body header .top_bar h1 {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  font-family: 'microsoft yahei';
+  margin: 0;
+}
+html body header .top_bar a {
+  color: orangered;
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  line-height: 44px;
+}
+html body header .top_bar a:hover {
+  color: orangered;
+  text-decoration: none;
+}
+html body main .avatar {
+  width: 100%;
+}
+html body main .avatar img {
+  display: block;
+  width: 100%;
+}
+html body main .view {
+  margin: 10px auto;
+  width: 100%;
+  border-top: 2px solid #c8c7cc;
+  border-bottom: 2px solid #c8c7cc;
+}
+html body main .view p {
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  color: gray;
+  border-bottom: 2px solid #c8c7cc;
+  margin-bottom: 0;
+  padding-left: 10px;
+  font-family: consolas;
+  margin-left: 15px;
+}
+html body main .view p:nth-child(4) {
+  border-bottom: none;
+  height: 45px;
+  line-height: 45px;
+}
+html body main .view p:nth-child(7) {
+  border-bottom: none;
+  height: 45px;
+  line-height: 45px;
+}
+html body main .view p:nth-child(5) {
+  border-top: 2px solid #c8c7cc;
+  border-bottom: 2px solid #c8c7cc;
+  background-color: #fafafa;
+  height: 20px;
+  margin-left: 0;
+}
+html body main .view a {
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  color: gray;
+  font-family: consolas;
+}
+html body main .view a:hover {
+  color: gray;
+  text-decoration: none;
+}
+html body main .copyright {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  color: gray;
+}
